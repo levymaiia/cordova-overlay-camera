@@ -28,7 +28,7 @@ navigator.overlayCamera.getPicture(filename, success, failure, [ options ]);
 |         Parameter       |        Description        |
 | ----------------------- | --------------------------| 
 | filename | The filename to use for the captured image - the file will be stored in the local application cache. Note that the plugin only returns images in the JPG format. |
-| success | A callback which will be executed on successful capture with the file URI as the first parameter. |
+| success | A callback which will be executed on successful capture with the image data as the first parameter. |
 | error | A callback which will be executed if the capture fails with an error message as the first parameter. |
 | options | An optional object specifying capture options. |
 
@@ -47,8 +47,8 @@ Setting both targetWidth and targetHeight to -1 will disable image scaling. Sett
 ### Example
 
 ```js
-navigator.overlayCamera.getPicture(filename, function success(fileUri) {
-    alert("File location: " + fileUri);
+navigator.overlayCamera.getPicture(filename, function success(imageData) {
+    console.log(imageData);
 }, function failure(error) {
     alert(error);
 }, {
