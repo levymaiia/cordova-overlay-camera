@@ -169,11 +169,11 @@ public class OverlayCameraActivity extends Activity {
         buttonLayout.addView(captureButton);
         cancelButton = new ImageButton(getApplicationContext());
         setBitmap(cancelButton, "cancel_button.png");
-        RelativeLayout.LayoutParams cancelButtonParams = new RelativeLayout.LayoutParams(pxFromDp(30), pxFromDp(30));
+        RelativeLayout.LayoutParams cancelButtonParams = new RelativeLayout.LayoutParams(pxFromDp(5), pxFromDp(50));
         cancelButton.setScaleType(ScaleType.FIT_CENTER);
         cancelButtonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        cancelButtonParams.bottomMargin = pxFromDp(20);
-        cancelButtonParams.leftMargin = pxFromDp(20);
+        cancelButtonParams.bottomMargin = pxFromDp(5);
+        cancelButtonParams.leftMargin = pxFromDp(5);
         cancelButton.setBackgroundColor(Color.TRANSPARENT);
         cancelButton.setLayoutParams(cancelButtonParams);
         cancelButton.setOnClickListener(new View.OnClickListener() {
