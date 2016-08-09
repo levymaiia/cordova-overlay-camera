@@ -91,7 +91,7 @@ public class OverlayCamera extends CordovaPlugin {
 			FileInputStream fileInputStream = new FileInputStream(imageFile);
 			fileInputStream.read(bytes);
 
-			imgStr = Base64.encodeToString(bytes, Base64.DEFAULT);
+			imgStr = Base64.encodeToString(bytes, Base64.NO_WRAP);
 		} catch (Exception e) {
 			callbackContext.error("Failed to take picture");
 		}
